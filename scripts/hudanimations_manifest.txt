@@ -1,0 +1,6 @@
+"HudAnimations_Manifest"
+{
+	"file"	"scripts/chat.txt"
+
+	"file"	"scripts/hudanimations_tf.txt"
+}

@@ -1,0 +1,34 @@
+event MenuOpen
+{
+	StopEvent	MenuClose 0.0 
+RunEvent SetHudChatAlpha 0
+	// fade in
+	Animate HudMenu Alpha 		"255"		Linear 0.0 0.1
+	Animate HudMenu SelectionAlpha 	"255"		Linear 0.0 0.1
+	Animate HudMenu FgColor		"FgColor"		Linear 0.0 0.1
+	Animate HudMenu MenuColor		"MenuColor"	Linear  0.0 0.1
+	Animate HudMenu ItemColor		"ItemColor"	Linear 0.0 0.1
+	Animate HudMenu TextScan		"1"		Linear 0.0 0.1
+
+	// Undo any blur
+	Animate HudMenu		Blur		"1"			Linear	0.0		0.01
+}
+
+event SetHudChatAlpha
+{
+//	Animate HudChat bgcolor "0 0 0 0" linear 0.0 0.0
+//	Animate HudChat bgcolor "0 0 0 0" linear 0.0 100.0
+//	Animate HudChatHistory bgcolor "0 0 0 0" linear 0.0 0.0
+//	Animate HudChatHistory bgcolor "0 0 0 0" linear 0.0 100.0
+	
+	Animate HudChat bgcolor "0 0 0 0" linear 0.0 0.0
+	Animate HudChat bgcolor "0 0 0 0" linear 0.0 100.0
+	Animate HudChatHistory bgcolor "0 0 0 0" linear 0.0 0.0
+	Animate HudChatHistory bgcolor "0 0 0 0" linear 0.0 100.0
+	
+	RunEvent SetHudChatAlphaLoop 0.1
+}
+event SetHudChatAlphaLoop
+{
+	RunEvent SetHudChatAlpha 0.1
+}
